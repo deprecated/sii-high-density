@@ -45,3 +45,31 @@
 ** WFC3 observations of Orion S
 
 [[file:Orion-S-WFC3-Densities.jpg]]
+
+What I wrote to cloudy-dev:
+
+: A quick follow-up.   I think the following figure proves beyond doubt that PKW09 is the correct high-density limit (or at least, much closer to reality than Chianti or KKFBL14).
+
+: This shows the results from the moth-balled Orion WFC3 paper (I really must get back to finish that ...).  It is the two dimensional histogram of the [S II] and [N II] ratios for every pixel.
+
+: The upshot is that almost the entire Orion S field has 6716/6731 ratios that are lower than the KKFBL14 limit (assuming Christophe's figure is correct).  And half of the field has ratios lower than the Chianti limit.
+
+This seems to rule out R(\infty) > 0.47, given the uncertainties in the observations.
+
+** Other atomic data
++ Wang et al 2004A%26A...427..873W
+  + Compare lots of different density-sensitive ratios
+  + For [S II] TPs they use:
+    + Mendoza & Zeippen (1982) - R = 0.44 in high density limit
+    + Keenan et al (1993) 
+      - They show a graph (Fig 1) where the high-density limit looks to be 0.46 +/- 0.01, but it seems to be slightly dependent on T - *why is that?*
+      - They /say/ that they get values "up to ~ 10% larger" than MZ82, but that is not apparent from the figure.
+      - They give a table, which should be more reliable.  Here, I copy the total (E2 + M1) transition probabilities and in the last column give 1.5 times the ratio of A-values, which should be the high-density limit of the intensity ratio:
+        |               | A(6716) | A(6731) |  R(\infty) |
+        |---------------+---------+---------+-------|
+        | "This work"   | 2.85e-4 | 1.24e-3 | 0.345 |
+        | MZ82          | 2.60e-4 | 8.82e-4 | 0.442 |
+        | "Recommended" | 2.73e-4 | 8.90e-4 | 0.460 |
+        #+TBLFM: $4=1.5*$2/$3;f3
+      - So, the "recommended" value is consistent with what I measured from the figure
+
