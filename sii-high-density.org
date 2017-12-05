@@ -1,8 +1,8 @@
 * Observations of [S II] nebular lines in high density limit
 + Inspired by thread on Cloudy-dev list with Christophe and Gary
   + [[https://groups.google.com/d/msg/cloudy-dev/4SO2bXMVTTo/UQTtOrVWBgAJ][Google groups public link]]
-  + [[https://mail.google.com/mail/?authuser=whenney%2540gmail.com&pcd=2&zx=l989fqv01cv8#label/_work%252Fcloudy/16026d0263e4fb2d][Gmail link]]
-  + [[mailplane://whenney%40gmail.com/#label/_work%2Fcloudy/16026d0263e4fb2d][Mailplane link]]
+#  + [[https://mail.google.com/mail/?authuser=whenney%2540gmail.com&pcd=2&zx=l989fqv01cv8#label/_work%252Fcloudy/16026d0263e4fb2d][Gmail link]]
+#  + [[mailplane://whenney%40gmail.com/#label/_work%2Fcloudy/16026d0263e4fb2d][Mailplane link]]
 + Figure from Christophe
   [[file:compareSII.png]]
 + High density limits from different papers, measured from the figure
