@@ -1,0 +1,47 @@
+* Observations of [S II] nebular lines in high density limit
++ Inspired by thread on Cloudy-dev list with Christophe and Gary
+  + [[https://groups.google.com/d/msg/cloudy-dev/4SO2bXMVTTo/UQTtOrVWBgAJ][Google groups public link]]
+  + [[https://mail.google.com/mail/?authuser=whenney%2540gmail.com&pcd=2&zx=l989fqv01cv8#label/_work%252Fcloudy/16026d0263e4fb2d][Gmail link]]
+  + [[mailplane://whenney%40gmail.com/#label/_work%2Fcloudy/16026d0263e4fb2d][Mailplane link]]
++ Figure from Christophe
+  [[file:compareSII.png]]
++ High density limits from different papers, measured from the figure
+  that Christophe sent
+  |         | log10(6716/6731) | 6716/6731 |
+  |---------+------------------+-----------|
+  | PKW09   |           -0.361 |     0.436 |
+  | KKFBL14 |           -0.264 |     0.545 |
+  | Chianti |           -0.290 |     0.513 |
+#+TBLFM: $3=10**$-1;f3
+** HST 10 from Tsamis et al 2013MNRAS.430.3406T
++ Distant proplyd - should have peak N_e = 1e5 pcc 
++ R(S II) for proplyd is (1.82 +/- 0.32) / (4.00 +/- 0.67) = 0.455 +/- 0.110
+  + log10(R) = -0.34 +/- 0.11
++ Consistent with all 3 high-density limits
++ Background nebula has (2.44 +/- 0.60) / (3.63 +/- 0.88) = 0.67 +/- 0.23
+  + log10(R) = -0.17 +/- 0.15 => N = 2000 - 3000 pcc, as expected around there
+
+** LV2 from Tsamis 2011MNRAS.412.1367T
++ Close-in proplyd - should have peak N_e = 2e6 pcc
++ HST FOS DATA
+  + For proplyd cusp gives 6731/6716 = 3.73 +/- 1.68 => R = 0.268 +/- 0.121
+    + log10(R) = -0.57 +/- 0.19
+  + Consistent with PKW09, but not the others
+  + For nebula 6731/6716 = 1.75 +/- 0.26 => R = 0.571 +/- 0.085
+    + log10(R) = -0.243 +/- 0.065
+    + => N = 3000 pcc for PKW09, or higher for other curves
++ VLT ARGUS data
+  + Gives inverted ratio as 6731/6716 = 2.64 +/- 0.01 => 6716/6731 = 0.379 +/- 0.001
+    + log10(R) = -0.421 +/- 0.002
+    + This is lower than any of the theoretical limits!
+    + And error bars are suspiciously small.  The relative error on I(6731) is given as 0.04.  It is /possible/ that the error on the ratio is smaller than this, as stated, but a more conservative approach would be to apply this relative error to the ratio also => R = 0.379 +/- 0.016
+      + => log10(R) = -0.421 +/- 0.018
+    + Consistent with PKW09, but not the others 
+  + Background nebula has 6716/31 = 1.66 +/- 0.004 => R = 0.602 +/- 0.001
+    + => log10(R) = -0.220 +/- 0.001
+    + => N = 3000 - 10,000 pcc depending on which curve
+
+
+** WFC3 observations of Orion S
+
+[[file:Orion-S-WFC3-Densities.jpg]]
