@@ -47,12 +47,13 @@
 [[file:Orion-S-WFC3-Densities.jpg]]
 
 What I wrote to cloudy-dev:
+#+BEGIN_QUOTE
+A quick follow-up.   I think the following figure proves beyond doubt that PKW09 is the correct high-density limit (or at least, much closer to reality than Chianti or KKFBL14).
 
-: A quick follow-up.   I think the following figure proves beyond doubt that PKW09 is the correct high-density limit (or at least, much closer to reality than Chianti or KKFBL14).
+This shows the results from the moth-balled Orion WFC3 paper (I really must get back to finish that ...).  It is the two dimensional histogram of the [S II] and [N II] ratios for every pixel.
 
-: This shows the results from the moth-balled Orion WFC3 paper (I really must get back to finish that ...).  It is the two dimensional histogram of the [S II] and [N II] ratios for every pixel.
-
-: The upshot is that almost the entire Orion S field has 6716/6731 ratios that are lower than the KKFBL14 limit (assuming Christophe's figure is correct).  And half of the field has ratios lower than the Chianti limit.
+The upshot is that almost the entire Orion S field has 6716/6731 ratios that are lower than the KKFBL14 limit (assuming Christophe's figure is correct).  And half of the field has ratios lower than the Chianti limit.
+#+END_QUOTE
 
 This seems to rule out R(\infty) > 0.47, given the uncertainties in the observations.
 
