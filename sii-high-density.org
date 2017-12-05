@@ -73,4 +73,7 @@ This seems to rule out R(\infty) > 0.47, given the uncertainties in the observat
         | "Recommended" | 2.73e-4 | 8.90e-4 | 0.460 |
         #+TBLFM: $4=1.5*$2/$3;f3
       - So, the "recommended" value is consistent with what I measured from the figure
++ Annotation of Wang's Fig 1 with the offending high density ratios marked
+  + [[file:Wang-2014-annotated.jpg]]
+
 
