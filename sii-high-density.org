@@ -70,23 +70,57 @@ This seems to rule out R(\infty) > 0.47, given the uncertainties in the observat
   + The air wavelengths look reasonable
 + Results are given in terms of "transition line strength", S
   + According to Berestetskii, Pitaevskii, & Lifshitz's QED book (Eq. 49.4), the transition probability is proportional to  \omega^3 S / (2 J  + 1)
+    + In full: A = (4 \omega^3 / 3 \hbar c^3) (S / (2 J + 1))
+    + \omega = 2 \pi \nu = 2 \pi c / \lambda = 2 \pi c N, where N is wave number (14853 /cm for 2\to1)
+    + So 4 (2 pi 14853)**3 / 3 hbar = 1.028e42 
+  + Similarly, Hubeny & Mihalas (5.108a) have
+    + g_u A_ul = (64 π^4 ν^3_lu /3c^3 h) S(l, u)
+    + This gives me the same factor: 1.027e42
+  + Aha, S is in "a.u.", presumably "atomic units"
+    + Since it is a dipole element squared, that is probably (e a_0)^2
+    + => (4.8032e-10 5.292e-9)**2 = 6.46101891044e-36
+    + => A = 6.64e6 S / (2 J + 1)
+    + *But*, these are not dipole transitions, they are electric quadrupole (E2) or magnetic dipole (M1)
+      + E2 :: units are (e a_0^2)^2 
+      + M1 :: units of (\mu_B)^2
+    + Turns out that Lykins et al (2015ApJ...807..118L) has the necessary conversion factors in their Table 2
+    + A^k_ul = C_\lambda S / (g_u \lambda^{2k + 1})
+    + Where k is the multipole order
+      |    |         C_\lambda |
+      |----+------------|
+      | E1 | 2.02613e18 |
+      | M1 | 2.69735e13 |
+      | E2 | 1.11995e18 |
+      | M2 | 1.49097e13 |
+    + Checking the E1 case against my previous numbers:
+      + 1.028e42 6.46101891044e-36 6731**3 => 2.02550303603e18
+      + This us tolerably close to the 2.02613e18, so everything is consistent
   + The ratio of \omega^3 is (6731/6716)^3 = 1.007, so that isn't important
   + The ratio of statistical weights is (2 (3/2) + 1) / (2 (3/2)  + 1) = 2/3
     + But this cancels with the factor (2 J + 1) in the expression for N_u
-  + So I think we should have I(6716) / I(6731) = 1.007 S_3\to1 / S_2\to1 in high-density limit
-+ Copied directly from machine-readable Table 3 
-  | Data | Type | Nl | Nu |        S |
-  |------+------+----+----+----------|
-  | S    | E2   |  1 |  2 | 5.54E-03 |
-  | S    | M1   |  1 |  2 | 1.77E-05 |
-  | S    | E2   |  1 |  3 | 1.29E-02 |
-  | S    | M1   |  1 |  3 | 6.30E-07 |
-+ Transposed table snippet
-  | S(2 \to 1) E2 | S(2 \to 1) M1 | S(3 \to 1) E2 | S(3 \to 1) M1 | I(6716 / 6731) |
-  |-------------+-------------+-------------+-------------+----------------|
-  | 5.54E−03    | 1.77E−05    | 1.29E−02    | 6.30E−07    |          2.337 |
-  #+TBLFM: $5=1.007 ($3 + $4) / ($1 + $2) ;f3
-+ Help, this doesn't make sense!  It should give a ratio smaller than 1
+  + So I think we should have I(6716) / I(6731) = 1.007 S_3\to1 /
+    S_2\to1 in high-density limit (*correct, but we can't use that
+    directly* because of E2 and M1 contributions, which have different
+    S \to A conversion factors)
++ *Now go back to the S values*
+  + Copied directly from machine-readable Table 3 
+    | Data | Type | Nl | Nu |        S |
+    |------+------+----+----+----------|
+    | S    | E2   |  1 |  2 | 5.54E-03 |
+    | S    | M1   |  1 |  2 | 1.77E-05 |
+    | S    | E2   |  1 |  3 | 1.29E-02 |
+    | S    | M1   |  1 |  3 | 6.30E-07 |
+  + Adding new columns for k, C_\lambda, and \lambda (use vac values), g_u, and then finally calculate A using the expression A^k_ul = C_\lambda S / (g_u \lambda^{2k + 1})
+    | Type | k |         C_\lambda | \lambda(vac) | N_l | N_u | g_u |        S |        A |
+    |------+---+------------+--------+----+----+----+----------+----------|
+    | E2   | 2 | 1.11995e18 | 6732.6 |  1 |  2 |  4 | 5.54E-03 | 1.121e-4 |
+    | M1   | 1 | 2.69735e13 | 6732.6 |  1 |  2 |  4 | 1.77E-05 | 3.911e-4 |
+    | E2   | 2 | 1.11995e18 | 6718.2 |  1 |  3 |  6 | 1.29E-02 | 1.759e-4 |
+    | M1   | 1 | 2.69735e13 | 6718.2 |  1 |  3 |  6 | 6.30E-07 | 9.340e-6 |
+    |------+---+------------+--------+----+----+----+----------+----------|
+    |      |   |            |        |    |    |    |   HDL => |    0.552 |
+    #+TBLFM: $9=$3 $8 / $7 $4**(2 $2 + 1) ;s4::@6$9=1.5 (@4 + @5) / (@2 + @3); f3
+  + *Yes*, we get exactly the same HDL value as from the PyNeb file
 
 
 ** Getting the data from PyNeb's file
