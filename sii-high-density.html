@@ -1,0 +1,1044 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2017-12-06 Wed 13:18 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title></title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="William Henney" />
+<style type="text/css">
+<!--/*--><![CDATA[/*><!--*/
+/* 18 Jan 2016: Modified from the stylesheet by Zhitao Gong on
+https://github.com/gongzhitaao/orgcss/
+ */
+
+body {
+    max-width: 100%;
+    margin: 1% 1%;
+    font: normal normal normal 16px/1.6em 'Open Sans', sans-serif;
+    color: #333;
+}
+
+@media all and (min-width: 95ex) {
+    body {
+        max-width: 95ex;
+        margin: 1% auto;
+    }
+
+    .creator {
+        float: right;
+    }
+}
+
+@media not all and (min-width: 110ex) {
+
+    .creator {
+        float: left;
+    }
+
+    p img {
+        width: 95%;
+    }
+}
+
+.title {
+    padding: .5em 0;
+    text-align: center;
+    color: black;
+}
+
+.subtitle {
+    font-size: medium;
+    font-weight: bold;
+    margin-top: 0;
+    text-align: center;
+}
+
+.abstract {
+    width: 80%;
+    margin: auto;
+    font-style: italic;
+}
+
+.abstract p:last-of-type:before {
+    content: "    ";
+    white-space: pre;
+}
+
+.status {
+    font-size: 90%;
+    margin: 2em auto;
+}
+
+[class^="section-number-"] {
+    margin-right: .5em;
+}
+
+#footnotes {
+    font-size: 90%;
+}
+
+.footpara {
+    display: inline;
+    margin: .2em auto;
+}
+
+.footdef {
+    margin-bottom: 1em;
+}
+
+.footdef sup {
+    padding-right: .5em;
+}
+
+a {
+    color: #527d9a;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #003355;
+    border-bottom: 1px dotted;
+}
+
+p img {
+    vertical-align: middle;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    color: #A5573E;
+    line-height: 1.6em;
+    font-family: 'Droid Serif', serif;
+}
+
+h4,h5,h6 {
+    font-size: 1em;
+}
+
+table {
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+    margin: auto;
+    border-collapse: collapse;
+}
+
+thead {
+    border-bottom: 2px solid;
+}
+
+table td + td, table th + th {
+    border-left: 1px solid gray;
+}
+
+table tr {
+    border-top: 1px solid lightgray;
+}
+
+td,th {
+    padding: 5px 10px;
+    vertical-align: middle;
+}
+
+code {
+    padding: 2px 5px;
+    margin: auto 1px;
+    border: 1px solid #DDD;
+    border-radius: 3px;
+    background-clip: padding-box;
+    color: #333;
+    font-size: 90%;
+}
+
+blockquote {
+    margin: 1em 2em;
+    padding-left: 1em;
+    border-left: 3px solid #ccc;
+}
+
+kbd {
+    background-color: #f7f7f7;
+    font-size: 14px;
+    margin: 0 .1em;
+    padding: .1em .6em;
+}
+
+.figure {
+    padding: 1em;
+}
+
+.figure p {
+    text-align: center;
+}
+
+.todo {
+    color: red;
+    font-family: monospace;
+}
+
+.done {
+    color: green;
+    font-family: monospace;
+}
+
+.priority {
+    color: orange;
+    font-family: monospace;
+}
+
+.tag {
+    background-color: #eee;
+    font-family: monospace;
+    font-size: 80%;
+    font-weight: normal;
+    padding: 2px;
+}
+
+.timestamp {
+    color: #bebebe;
+}
+
+.timestamp-kwd {
+    color: #5f9ea0;
+}
+
+.org-right {
+    margin-left: auto;
+    margin-right: 0px;
+    text-align: right;
+}
+
+.org-left {
+    margin-left: 0px;
+    margin-right: auto;
+    text-align: left;
+}
+
+.org-center {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+#postamble p, #preamble p {
+    font-size: 90%;
+    margin: .2em;
+}
+
+p.verse {
+    margin-left: 3%;
+}
+
+pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    font-family: monospace;
+    margin: 1.2em;
+    padding: 8pt;
+}
+
+pre.src {
+    overflow: auto;
+    padding-top: 1.2em;
+    position: relative;
+    font-size: 90%;
+    color: #dcdccc;
+    background-color: #3f3f3f; 
+}
+
+pre.src:before {
+    background-color: gray;
+    border: 1px solid black;
+    display: none;
+    padding: 3px;
+    position: absolute;
+    right: 10px;
+    /* top: -10px; */
+}
+
+pre.src:hover:before {
+    display: inline;
+}
+
+pre.src-sh:before {
+    content: 'sh';
+}
+pre.src-bash:before {
+    content: 'bash';
+}
+pre.src-emacs-lisp:before {
+    content: 'Emacs Lisp';
+}
+pre.src-R:before {
+    content: 'R';
+}
+pre.src-python:before {
+    content: 'Python';
+}
+pre.src-org:before {
+    content: 'Org';
+}
+pre.src-c++:before {
+    content: 'C++';
+}
+pre.src-c:before {
+    content: 'C';
+}
+pre.src-html:before {
+    content: 'HTML'
+}
+
+caption.t-above {
+    caption-side: top;
+}
+
+caption.t-bottom {
+    caption-side: bottom;
+}
+
+th.org-right {
+    text-align: center;
+}
+
+th.org-left {
+    text-align: center;
+}
+
+th.org-center {
+    text-align: center;
+}
+
+td.org-right {
+    text-align: right;
+}
+
+td.org-left {
+    text-align: left;
+}
+
+td.org-center {
+    text-align: center;
+}
+
+dt {
+    font-weight: bold;
+}
+
+.inlinetask {
+    background: #ffffcc;
+    border: 2px solid gray;
+    margin: 10px;
+    padding: 10px;
+}
+
+#org-div-home-and-up {
+    font-size: 70%;
+    text-align: right;
+    white-space: nowrap;
+}
+
+.linenr {
+    font-size: smaller;
+}
+
+.code-highlighted {
+    background-color: #ffff00;
+}
+
+#bibliography {
+    font-size: 90%;
+}
+
+#bibliography table {
+    width: 100%;
+}
+
+/* .org-info-js_info-navigation { */
+/*     border-style: none; */
+/* } */
+/* #org-info-js_console-label { */
+/*     font-size: 10px; */
+/*     font-weight: bold; */
+/*     white-space: nowrap; */
+/* } */
+/* .org-info-js_search-highlight { */
+/*     background-color: #ffff00; */
+/*     color: #000000; */
+/*     font-weight: bold; */
+/* } */
+/*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2017 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org27a4bbd">1. Observations of [S II] nebular lines in high density limit</a>
+<ul>
+<li><a href="#orga033eb8">1.1. HST 10 from Tsamis et al 2013MNRAS.430.3406T</a></li>
+<li><a href="#org2466aa9">1.2. LV2 from Tsamis 2011MNRAS.412.1367T</a></li>
+<li><a href="#org68e98f3">1.3. WFC3 observations of Orion S</a></li>
+<li><a href="#org1e912c6">1.4. Getting the data directly from KKFBL14</a></li>
+<li><a href="#orgd33b0d1">1.5. Getting the data from PyNeb's file</a></li>
+<li><a href="#org4cd1943">1.6. Other atomic data</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org27a4bbd" class="outline-2">
+<h2 id="org27a4bbd"><span class="section-number-2">1</span> Observations of [S II] nebular lines in high density limit</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>Inspired by thread on Cloudy-dev list with Christophe and Gary
+<ul class="org-ul">
+<li><a href="https://groups.google.com/d/msg/cloudy-dev/4SO2bXMVTTo/UQTtOrVWBgAJ">Google groups public link</a></li>
+</ul></li>
+</ul>
+
+<ul class="org-ul">
+<li>Figure from Christophe
+<img src="compareSII.png" alt="compareSII.png" /></li>
+<li><p>
+High density limits from different papers, measured from the figure
+that Christophe sent
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">&#xa0;</th>
+<th scope="col" class="org-right">log10(6716/6731)</th>
+<th scope="col" class="org-right">6716/6731</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">PKW09</td>
+<td class="org-right">-0.361</td>
+<td class="org-right">0.436</td>
+</tr>
+
+<tr>
+<td class="org-left">KKFBL14</td>
+<td class="org-right">-0.264</td>
+<td class="org-right">0.545</td>
+</tr>
+
+<tr>
+<td class="org-left">Chianti</td>
+<td class="org-right">-0.290</td>
+<td class="org-right">0.513</td>
+</tr>
+</tbody>
+</table></li>
+</ul>
+</div>
+<div id="outline-container-orga033eb8" class="outline-3">
+<h3 id="orga033eb8"><span class="section-number-3">1.1</span> HST 10 from Tsamis et al 2013MNRAS.430.3406T</h3>
+<div class="outline-text-3" id="text-1-1">
+<ul class="org-ul">
+<li>Distant proplyd - should have peak N<sub>e</sub> = 1e5 pcc</li>
+<li>R(S II) for proplyd is (1.82 +/- 0.32) / (4.00 +/- 0.67) = 0.455 +/- 0.110
+<ul class="org-ul">
+<li>log10(R) = -0.34 +/- 0.11</li>
+</ul></li>
+<li>Consistent with all 3 high-density limits</li>
+<li>Background nebula has (2.44 +/- 0.60) / (3.63 +/- 0.88) = 0.67 +/- 0.23
+<ul class="org-ul">
+<li>log10(R) = -0.17 +/- 0.15 =&gt; N = 2000 - 3000 pcc, as expected around there</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org2466aa9" class="outline-3">
+<h3 id="org2466aa9"><span class="section-number-3">1.2</span> LV2 from Tsamis 2011MNRAS.412.1367T</h3>
+<div class="outline-text-3" id="text-1-2">
+<ul class="org-ul">
+<li>Close-in proplyd - should have peak N<sub>e</sub> = 2e6 pcc</li>
+<li>HST FOS DATA
+<ul class="org-ul">
+<li>For proplyd cusp gives 6731/6716 = 3.73 +/- 1.68 =&gt; R = 0.268 +/- 0.121
+<ul class="org-ul">
+<li>log10(R) = -0.57 +/- 0.19</li>
+</ul></li>
+<li>Consistent with PKW09, but not the others</li>
+<li>For nebula 6731/6716 = 1.75 +/- 0.26 =&gt; R = 0.571 +/- 0.085
+<ul class="org-ul">
+<li>log10(R) = -0.243 +/- 0.065</li>
+<li>=&gt; N = 3000 pcc for PKW09, or higher for other curves</li>
+</ul></li>
+</ul></li>
+<li>VLT ARGUS data
+<ul class="org-ul">
+<li>Gives inverted ratio as 6731/6716 = 2.64 +/- 0.01 =&gt; 6716/6731 = 0.379 +/- 0.001
+<ul class="org-ul">
+<li>log10(R) = -0.421 +/- 0.002</li>
+<li>This is lower than any of the theoretical limits!</li>
+<li>And error bars are suspiciously small.  The relative error on I(6731) is given as 0.04.  It is <i>possible</i> that the error on the ratio is smaller than this, as stated, but a more conservative approach would be to apply this relative error to the ratio also =&gt; R = 0.379 +/- 0.016
+<ul class="org-ul">
+<li>=&gt; log10(R) = -0.421 +/- 0.018</li>
+</ul></li>
+<li>Consistent with PKW09, but not the others</li>
+</ul></li>
+<li>Background nebula has 6716/31 = 1.66 +/- 0.004 =&gt; R = 0.602 +/- 0.001
+<ul class="org-ul">
+<li>=&gt; log10(R) = -0.220 +/- 0.001</li>
+<li>=&gt; N = 3000 - 10,000 pcc depending on which curve</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-org68e98f3" class="outline-3">
+<h3 id="org68e98f3"><span class="section-number-3">1.3</span> WFC3 observations of Orion S</h3>
+<div class="outline-text-3" id="text-1-3">
+
+<div class="figure">
+<p><img src="Orion-S-WFC3-Densities.jpg" alt="Orion-S-WFC3-Densities.jpg" />
+</p>
+</div>
+
+<p>
+What I wrote to cloudy-dev:
+</p>
+<blockquote>
+<p>
+A quick follow-up.   I think the following figure proves beyond doubt that PKW09 is the correct high-density limit (or at least, much closer to reality than Chianti or KKFBL14).
+</p>
+
+<p>
+This shows the results from the moth-balled Orion WFC3 paper (I really must get back to finish that &#x2026;).  It is the two dimensional histogram of the [S II] and [N II] ratios for every pixel.
+</p>
+
+<p>
+The upshot is that almost the entire Orion S field has 6716/6731 ratios that are lower than the KKFBL14 limit (assuming Christophe's figure is correct).  And half of the field has ratios lower than the Chianti limit.
+</p>
+</blockquote>
+
+<p>
+This seems to rule out R(&infin;) &gt; 0.47, given the uncertainties in the observations.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-org1e912c6" class="outline-3">
+<h3 id="org1e912c6"><span class="section-number-3">1.4</span> Getting the data directly from KKFBL14</h3>
+<div class="outline-text-3" id="text-1-4">
+<ul class="org-ul">
+<li><p>
+From Table 1, the relevant transitions are N = 3 &rarr; 1 and 2 &rarr; 1
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">N</th>
+<th scope="col" class="org-left">State</th>
+<th scope="col" class="org-left">J</th>
+<th scope="col" class="org-right">Wavnum</th>
+<th scope="col" class="org-right">&lambda;(vac)</th>
+<th scope="col" class="org-right">&lambda;(air)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">1</td>
+<td class="org-left">3p3 4S</td>
+<td class="org-left">3/2</td>
+<td class="org-right">0</td>
+<td class="org-right">1 / 0.0</td>
+<td class="org-right">1 / 0.0 / 1.0</td>
+</tr>
+
+<tr>
+<td class="org-right">2</td>
+<td class="org-left">3p3 2D</td>
+<td class="org-left">3/2</td>
+<td class="org-right">14853</td>
+<td class="org-right">6732.6</td>
+<td class="org-right">6730.6</td>
+</tr>
+
+<tr>
+<td class="org-right">3</td>
+<td class="org-left">3p3 2D</td>
+<td class="org-left">5/2</td>
+<td class="org-right">14885</td>
+<td class="org-right">6718.2</td>
+<td class="org-right">6716.2</td>
+</tr>
+</tbody>
+</table>
+<ul class="org-ul">
+<li>The wavenumbers come from the "Experiment" column</li>
+<li>The air wavelengths look reasonable</li>
+</ul></li>
+<li>Results are given in terms of "transition line strength", S
+<ul class="org-ul">
+<li>According to Berestetskii, Pitaevskii, &amp; Lifshitz's QED book (Eq. 49.4), the transition probability is proportional to  &omega;<sup>3</sup> S / (2 J  + 1)
+<ul class="org-ul">
+<li>In full: A = (4 &omega;<sup>3</sup> / 3 &hbar; c<sup>3</sup>) (S / (2 J + 1))</li>
+<li>&omega; = 2 &pi; &nu; = 2 &pi; c / &lambda; = 2 &pi; c N, where N is wave number (14853 /cm for 2&rarr;1)</li>
+<li>So 4 (2 pi 14853)**3 / 3 hbar = 1.028e42</li>
+</ul></li>
+<li>Similarly, Hubeny &amp; Mihalas (5.108a) have
+<ul class="org-ul">
+<li>g<sub>u</sub> A<sub>ul</sub> = (64 π<sup>4</sup> ν<sup>3</sup><sub>lu</sub> /3c<sup>3</sup> h) S(l, u)</li>
+<li>This gives me the same factor: 1.027e42</li>
+</ul></li>
+<li>Aha, S is in "a.u.", presumably "atomic units"
+<ul class="org-ul">
+<li>Since it is a dipole element squared, that is probably (e a<sub>0</sub>)<sup>2</sup></li>
+<li>=&gt; (4.8032e-10 5.292e-9)**2 = 6.46101891044e-36</li>
+<li>=&gt; A = 6.64e6 S / (2 J + 1)</li>
+<li><b>But</b>, these are not dipole transitions, they are electric quadrupole (E2) or magnetic dipole (M1)
+<dl class="org-dl">
+<dt>E2</dt><dd>units are (e a<sub>0</sub><sup>2</sup>)<sup>2</sup></dd>
+<dt>M1</dt><dd>units of (&mu;<sub>B</sub>)<sup>2</sup></dd>
+</dl></li>
+<li>Turns out that Lykins et al (2015ApJ&#x2026;807..118L) has the necessary conversion factors in their Table 2</li>
+<li>A<sup>k</sup><sub>ul</sub> = C<sub>&lambda;</sub> S / (g<sub>u</sub> &lambda;<sup>2k + 1</sup>)</li>
+<li><p>
+Where k is the multipole order
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">&#xa0;</th>
+<th scope="col" class="org-right">C<sub>&lambda;</sub></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">E1</td>
+<td class="org-right">2.02613e18</td>
+</tr>
+
+<tr>
+<td class="org-left">M1</td>
+<td class="org-right">2.69735e13</td>
+</tr>
+
+<tr>
+<td class="org-left">E2</td>
+<td class="org-right">1.11995e18</td>
+</tr>
+
+<tr>
+<td class="org-left">M2</td>
+<td class="org-right">1.49097e13</td>
+</tr>
+</tbody>
+</table></li>
+<li>Checking the E1 case against my previous numbers:
+<ul class="org-ul">
+<li>1.028e42 6.46101891044e-36 6731**3 =&gt; 2.02550303603e18</li>
+<li>This us tolerably close to the 2.02613e18, so everything is consistent</li>
+</ul></li>
+</ul></li>
+<li>The ratio of &omega;<sup>3</sup> is (6731/6716)<sup>3</sup> = 1.007, so that isn't important</li>
+<li>The ratio of statistical weights is (2 (3/2) + 1) / (2 (3/2)  + 1) = 2/3
+<ul class="org-ul">
+<li>But this cancels with the factor (2 J + 1) in the expression for N<sub>u</sub></li>
+</ul></li>
+<li>So I think we should have I(6716) / I(6731) = 1.007 S<sub>3&rarr;1</sub> /
+S<sub>2&rarr;1</sub> in high-density limit (<b>correct, but we can't use that
+directly</b> because of E2 and M1 contributions, which have different
+S &rarr; A conversion factors)</li>
+</ul></li>
+<li><b>Now go back to the S values</b>
+<ul class="org-ul">
+<li><p>
+Copied directly from machine-readable Table 3 
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Data</th>
+<th scope="col" class="org-left">Type</th>
+<th scope="col" class="org-right">Nl</th>
+<th scope="col" class="org-right">Nu</th>
+<th scope="col" class="org-right">S</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">S</td>
+<td class="org-left">E2</td>
+<td class="org-right">1</td>
+<td class="org-right">2</td>
+<td class="org-right">5.54E-03</td>
+</tr>
+
+<tr>
+<td class="org-left">S</td>
+<td class="org-left">M1</td>
+<td class="org-right">1</td>
+<td class="org-right">2</td>
+<td class="org-right">1.77E-05</td>
+</tr>
+
+<tr>
+<td class="org-left">S</td>
+<td class="org-left">E2</td>
+<td class="org-right">1</td>
+<td class="org-right">3</td>
+<td class="org-right">1.29E-02</td>
+</tr>
+
+<tr>
+<td class="org-left">S</td>
+<td class="org-left">M1</td>
+<td class="org-right">1</td>
+<td class="org-right">3</td>
+<td class="org-right">6.30E-07</td>
+</tr>
+</tbody>
+</table></li>
+<li><p>
+Adding new columns for k, C<sub>&lambda;</sub>, and &lambda; (use vac values), g<sub>u</sub>, and then finally calculate A using the expression A<sup>k</sup><sub>ul</sub> = C<sub>&lambda;</sub> S / (g<sub>u</sub> &lambda;<sup>2k + 1</sup>)
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Type</th>
+<th scope="col" class="org-right">k</th>
+<th scope="col" class="org-right">C<sub>&lambda;</sub></th>
+<th scope="col" class="org-right">&lambda;(vac)</th>
+<th scope="col" class="org-right">N<sub>l</sub></th>
+<th scope="col" class="org-right">N<sub>u</sub></th>
+<th scope="col" class="org-right">g<sub>u</sub></th>
+<th scope="col" class="org-right">S</th>
+<th scope="col" class="org-right">A</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">E2</td>
+<td class="org-right">2</td>
+<td class="org-right">1.11995e18</td>
+<td class="org-right">6732.6</td>
+<td class="org-right">1</td>
+<td class="org-right">2</td>
+<td class="org-right">4</td>
+<td class="org-right">5.54E-03</td>
+<td class="org-right">1.121e-4</td>
+</tr>
+
+<tr>
+<td class="org-left">M1</td>
+<td class="org-right">1</td>
+<td class="org-right">2.69735e13</td>
+<td class="org-right">6732.6</td>
+<td class="org-right">1</td>
+<td class="org-right">2</td>
+<td class="org-right">4</td>
+<td class="org-right">1.77E-05</td>
+<td class="org-right">3.911e-4</td>
+</tr>
+
+<tr>
+<td class="org-left">E2</td>
+<td class="org-right">2</td>
+<td class="org-right">1.11995e18</td>
+<td class="org-right">6718.2</td>
+<td class="org-right">1</td>
+<td class="org-right">3</td>
+<td class="org-right">6</td>
+<td class="org-right">1.29E-02</td>
+<td class="org-right">1.759e-4</td>
+</tr>
+
+<tr>
+<td class="org-left">M1</td>
+<td class="org-right">1</td>
+<td class="org-right">2.69735e13</td>
+<td class="org-right">6718.2</td>
+<td class="org-right">1</td>
+<td class="org-right">3</td>
+<td class="org-right">6</td>
+<td class="org-right">6.30E-07</td>
+<td class="org-right">9.340e-6</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">HDL =&gt;</td>
+<td class="org-right">0.552</td>
+</tr>
+</tbody>
+</table></li>
+<li><b>Yes</b>, we get exactly the same HDL value as from the PyNeb file</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-orgd33b0d1" class="outline-3">
+<h3 id="orgd33b0d1"><span class="section-number-3">1.5</span> Getting the data from PyNeb's file</h3>
+<div class="outline-text-3" id="text-1-5">
+<p>
+Contents of <code>s_ii_atom_KKFBL14.dat</code> from PyNeb (version 1.1.4b2) data dir. 
+</p>
+<pre class="example">
+Aij
+1/s 1/s 1/s 1/s 1/s 1/s 1/s 1/s 
+0.0000000e+00 0.0000000e+00 0.0000000e+00 0.0000000e+00 0.0000000e+00
+5.0317000e-04 0.0000000e+00 0.0000000e+00 0.0000000e+00 0.0000000e+00 
+1.8526000e-04 3.4658000e-07 0.0000000e+00 0.0000000e+00 0.0000000e+00 
+6.7035000e-02 1.3540000e-01 6.8062000e-02 0.0000000e+00 0.0000000e+00
+1.6704000e-01 1.0472000e-01 1.5059000e-01 9.1390000e-07 0.0000000e+00 
+*** ATOM sulfur
+*** SPECTRUM 2
+*** SOURCE3 Kisielius, R.; Kulkarni, V. P.; Ferland, G.; Bogdanovich, P.; Lykins, M. L. 2014
+*** NOTE3 All A-values for levels 1-5
+</pre>
+
+<ul class="org-ul">
+<li>Where did Christophe get those numbers from?</li>
+<li><p>
+Looks like columns are lower states, rows are upper states, which means:
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">A(2 &rarr; 1)</th>
+<th scope="col" class="org-right">A(3 &rarr; 1)</th>
+<th scope="col" class="org-right">I(6716 / 6731)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">5.0317000e-04</td>
+<td class="org-right">1.8526000e-04</td>
+<td class="org-right">0.552</td>
+</tr>
+</tbody>
+</table>
+<ul class="org-ul">
+<li>So this is more or less the same as I measured from Christophe's graph above</li>
+<li>And it is <i>way</i> higher than the earlier consensus value of &asymp; 0.45</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org4cd1943" class="outline-3">
+<h3 id="org4cd1943"><span class="section-number-3">1.6</span> Other atomic data</h3>
+<div class="outline-text-3" id="text-1-6">
+<ul class="org-ul">
+<li>Wang et al 2004A%26A&#x2026;427..873W
+<ul class="org-ul">
+<li>Compare lots of different density-sensitive ratios</li>
+<li>For [S II] TPs they use:
+<ul class="org-ul">
+<li>Mendoza &amp; Zeippen (1982) - R = 0.44 in high density limit</li>
+<li>Keenan et al (1993) 
+<ul class="org-ul">
+<li>They show a graph (Fig 1) where the high-density limit looks to be 0.46 +/- 0.01, but it seems to be slightly dependent on T - <b>why is that?</b></li>
+<li>They <i>say</i> that they get values "up to ~ 10% larger" than MZ82, but that is not apparent from the figure.</li>
+<li><p>
+They give a table, which should be more reliable.  Here, I copy the total (E2 + M1) transition probabilities and in the last column give 1.5 times the ratio of A-values, which should be the high-density limit of the intensity ratio:
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">&#xa0;</th>
+<th scope="col" class="org-right">A(6716)</th>
+<th scope="col" class="org-right">A(6731)</th>
+<th scope="col" class="org-right">R(&infin;)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">"This work"</td>
+<td class="org-right">2.85e-4</td>
+<td class="org-right">1.24e-3</td>
+<td class="org-right">0.345</td>
+</tr>
+
+<tr>
+<td class="org-left">MZ82</td>
+<td class="org-right">2.60e-4</td>
+<td class="org-right">8.82e-4</td>
+<td class="org-right">0.442</td>
+</tr>
+
+<tr>
+<td class="org-left">"Recommended"</td>
+<td class="org-right">2.73e-4</td>
+<td class="org-right">8.90e-4</td>
+<td class="org-right">0.460</td>
+</tr>
+</tbody>
+</table></li>
+<li>So, the "recommended" value is consistent with what I measured from the figure</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>Annotation of Wang's Fig 1 with the offending high density ratios marked
+<ul class="org-ul">
+<li><img src="Wang-2014-annotated.jpg" alt="Wang-2014-annotated.jpg" /></li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: William Henney</p>
+<p class="date">Created: 2017-12-06 Wed 13:18</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
